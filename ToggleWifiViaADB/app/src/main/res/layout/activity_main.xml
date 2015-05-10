@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Hi,  this app is created to toggle the phones wifi connection via android usb, this is achieved using adb shell. here&apos;s the command, youll need android sdk&apos;s adb for it to work.  turning wifi off adb shell am startservice --user 0 -e user_id 1 -n &quot;togglewifiviaadb.securitywizards.herobo.com.togglewifiviaadb/.WifiService --ez iswifienabled false&quot;  turning wifi on adb shell am startservice --user 0 -e user_id 1 -n &quot;togglewifiviaadb.securitywizards.herobo.com.togglewifiviaadb/.WifiService --ez iswifienabled true&quot;  turning wifi on on rooted phone adb -s 0123456789ABCDEF shell su -c &quot;am startservice -n togglewifiviaadb.securitywizards.herobo.com.togglewifiviaadb/.WifiService --ez iswifienabled true&quot;  turning wifi off on rooted phone adb -s 0123456789ABCDEF shell su -c &quot;am startservice -n togglewifiviaadb.securitywizards.herobo.com.togglewifiviaadb/.WifiService --ez iswifienabled false&quot; "
+            android:id="@+id/textView" />
+    </ScrollView>
+
+</LinearLayout>
